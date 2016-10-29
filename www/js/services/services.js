@@ -1,5 +1,69 @@
 angular.module('App.services', [])
 
+.factory('WaterData', function($firebaseObject,FURL,$firebaseArray) {
+  var Usage = [
+    {
+      id: 1,
+      dd: "01",
+      mm: "01",
+      yyyy: "2016",
+      time_stamp: '00:00',
+      volume_used: 0
+    },
+    {
+      id: 2,
+      dd: "01",
+      mm: "01",
+      yyyy: "2016",
+      time_stamp: '01:00',
+      volume_used: 1.5
+    },{
+      id: 3,
+      dd: "01",
+      mm: "01",
+      yyyy: "2016",
+      time_stamp: '02:00',
+      volume_used: 2.3
+    },{
+      id: 4,
+      dd: "01",
+      mm: "01",
+      yyyy: "2016",
+      time_stamp: '03:00',
+      volume_used: 3.0
+    },{
+      id: 5,
+      dd: "01",
+      mm: "01",
+      yyyy: "2016",
+      time_stamp: '04:00',
+      volume_used: 3.2
+    },{
+      id: 6,
+      dd: "01",
+      mm: "01",
+      yyyy: "2016",
+      time_stamp: '05:00',
+      volume_used: 5
+  }];
+  return {
+    all: function() {
+      return Usage;
+    },
+    remove: function(data) {
+      Usage.splice(Usage.indexOf(data), 1);
+    },
+    get: function(dataId) {
+      for (var i = 0; i < Usage.length; i++) {
+        if (Usage[i].id === parseInt(dataId)) {
+          return Usage[i];
+        }
+      }
+      return null;
+    }
+  };
+})
+
 .factory('Chats', function($firebaseObject,FURL,$firebaseArray) {
   // Might use a resource here that returns a JSON array
   /*

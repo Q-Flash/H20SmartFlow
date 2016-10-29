@@ -69,7 +69,11 @@ angular.module('App', ['ionic','ngMessages', 'App.controllers', 'App.services', 
     templateUrl: 'templates/login.html',
     controller:'loginController'
   })
-
+  .state('monitor', {
+    url: '/monitor',
+    templateUrl: 'templates/monitor.html',
+    controller:'GraphCtrl'
+  })
   .state('forgot', {
     url: '/forgot',
     templateUrl: 'templates/forgot.html',
@@ -90,4 +94,4 @@ angular.module('App', ['ionic','ngMessages', 'App.controllers', 'App.services', 
   $urlRouterProvider.otherwise('/login');
 
 })
-.constant('FURL', 'https://event-master2.firebaseio.com/');
+.constant('FURL', 'https://event-master1.firebaseio.com/');

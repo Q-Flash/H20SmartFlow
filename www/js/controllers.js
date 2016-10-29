@@ -1,10 +1,26 @@
 angular.module('App.controllers', ['ionic','ionic.rating', 'ngCordova'])
 
 .controller('DashCtrl', function($scope) {})
+.controller('GraphCtrl',function($scope){
+  $scope.graph = {};
+  $scope.graph.data = [
+    //Awake
+    [16, 15, 20, 12, 16, 12, 8],
+    //Asleep
+    [8, 9, 4, 12, 8, 12, 14]
+  ];
+  $scope.graph.labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  $scope.graph.series = ['Awake', 'Asleep'];
 
+});
+
+
+
+
+})
 .controller('MapCtrl', function($scope, $state, $cordovaGeolocation, $ionicLoading, $ionicPopup) {
   var options = {timeout: 10000, enableHighAccuracy: true, maximumAge: 0};
- 
+
   $cordovaGeolocation.getCurrentPosition(options).then(function(position){
     var EventmyLatlng = new google.maps.LatLng('13.1704468','-59.6357891'); //Sandy Lane Golf Course
     var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
