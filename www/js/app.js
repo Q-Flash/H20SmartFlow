@@ -40,15 +40,6 @@ angular.module('App', ['ionic','ngMessages', 'App.controllers', 'App.services', 
     templateUrl: 'templates/tabs.html'
   })
 
-  .state('tab.map', {
-      url: '/map',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/map.html',
-          controller: 'MapCtrl'
-        }
-      }
-    })
   // Each tab has its own nav history stack:
 
   .state('tab.dash', {
@@ -61,24 +52,6 @@ angular.module('App', ['ionic','ngMessages', 'App.controllers', 'App.services', 
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
 
   .state('tab.account', {
     url: '/account',
@@ -90,22 +63,13 @@ angular.module('App', ['ionic','ngMessages', 'App.controllers', 'App.services', 
     }
   })
 
-  .state('admin-events', {
-    url: '/admin-events',
-    templateUrl: 'templates/admin-events.html',
-    controller:'eventController'
-  })
 
   .state('login', {
     url: '/login',
     templateUrl: 'templates/login.html',
     controller:'loginController'
   })
-  .state('adminlogin', {
-      url: '/adminlogin',
-      templateUrl: 'templates/admin-login.html',
-      controller:'adminloginController'
-    })
+
   .state('forgot', {
     url: '/forgot',
     templateUrl: 'templates/forgot.html',
@@ -123,7 +87,7 @@ angular.module('App', ['ionic','ngMessages', 'App.controllers', 'App.services', 
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/chats');
+  $urlRouterProvider.otherwise('/login');
 
 })
 .constant('FURL', 'https://event-master2.firebaseio.com/');
