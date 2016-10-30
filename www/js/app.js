@@ -74,6 +74,16 @@ angular.module('App', ['ionic','ngMessages', 'App.controllers', 'App.services', 
     templateUrl: 'templates/monitor.html',
     controller:'GraphCtrl'
   })
+  .state('monitor2', {
+    url: '/monitor2',
+    templateUrl: 'templates/monitor2.html',
+    controller:'GraphCtrl'
+  })
+  .state('monitor3', {
+    url: '/monitor3',
+    templateUrl: 'templates/monitor3.html',
+    controller:'GraphCtrl'
+  })
   .state('forgot', {
     url: '/forgot',
     templateUrl: 'templates/forgot.html',
