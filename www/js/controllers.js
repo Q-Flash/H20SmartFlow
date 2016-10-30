@@ -1,6 +1,8 @@
 angular.module('App.controllers', ['ionic','ionic.rating', 'ngCordova'])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope) {
+
+})
 .controller('GraphCtrl',function($scope){
   $scope.graph = {};
   $scope.graph.data = [
@@ -11,13 +13,8 @@ angular.module('App.controllers', ['ionic','ionic.rating', 'ngCordova'])
   ];
   $scope.graph.labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   $scope.graph.series = ['Awake', 'Asleep'];
-
-});
-
-
-
-
 })
+
 .controller('MapCtrl', function($scope, $state, $cordovaGeolocation, $ionicLoading, $ionicPopup) {
   var options = {timeout: 10000, enableHighAccuracy: true, maximumAge: 0};
 

@@ -4,45 +4,45 @@ angular.module('App.services', [])
   var Usage = [
     {
       id: 1,
-      dd: "01",
-      mm: "01",
-      yyyy: "2016",
+      dd: '01',
+      mm: '01',
+      yyyy: '2016',
       time_stamp: '00:00',
       volume_used: 0
     },
     {
       id: 2,
-      dd: "01",
-      mm: "01",
-      yyyy: "2016",
+      dd: '01',
+      mm: '01',
+      yyyy: '2016',
       time_stamp: '01:00',
       volume_used: 1.5
     },{
       id: 3,
-      dd: "01",
-      mm: "01",
-      yyyy: "2016",
+      dd: '01',
+      mm: '01',
+      yyyy: '2016',
       time_stamp: '02:00',
       volume_used: 2.3
     },{
       id: 4,
-      dd: "01",
-      mm: "01",
-      yyyy: "2016",
+      dd: '01',
+      mm: '01',
+      yyyy: '2016',
       time_stamp: '03:00',
       volume_used: 3.0
     },{
       id: 5,
-      dd: "01",
-      mm: "01",
-      yyyy: "2016",
+      dd: '01',
+      mm: '01',
+      yyyy: 2016,
       time_stamp: '04:00',
       volume_used: 3.2
     },{
       id: 6,
-      dd: "01",
-      mm: "01",
-      yyyy: "2016",
+      dd: '01',
+      mm: '01',
+      yyyy: '2016',
       time_stamp: '05:00',
       volume_used: 5
   }];
