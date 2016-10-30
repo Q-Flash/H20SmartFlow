@@ -88,8 +88,13 @@ angular.module('App', ['ionic','ngMessages', 'App.controllers', 'App.services', 
     url: '/home',
     templateUrl: 'templates/tabs.html',
     controller:'homeController'
-  });
+  })
 
+  .state('faucet', {
+    url: '/faucet',
+    templateUrl: 'templates/faucet.html',
+    controller:'homeController'
+  });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
 
